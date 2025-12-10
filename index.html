@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Погода</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-text">
+        <h1>Погода</h1>
+        <p>Введите координаты и добавьте один или несколько виджетов.</p>
+      </div>
+    </header>
+    <main class="app-main">
+      <section class="card controls-card">
+        <form id="location-form" novalidate>
+          <div class="field-group">
+            <label for="latitude">Широта</label>
+            <input
+              id="latitude"
+              name="latitude"
+              type="text"
+              inputmode="decimal"
+              placeholder="Например 56.8441"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label for="longitude">Долгота</label>
+            <input
+              id="longitude"
+              name="longitude"
+              type="text"
+              inputmode="decimal"
+              placeholder="Например 60.6540"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button type="submit" class="primary-btn">Показать погоду</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="widgets-section">
+        <h2>Мои локации</h2>
+        <div id="widgets-container" class="widgets-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <template id="widget-template">
+      <article class="card weather-card">
+        <header class="weather-card__header">
+          <div>
+            <p class="weather-card__coords"></p>
+            <p class="weather-card__time"></p>
+          </div>
+          <button class="icon-btn remove-btn" type="button" aria-label="Удалить виджет">×</button>
+        </header>
+        <div class="weather-card__body">
+          <div class="weather-card__content">
+            <div class="weather-card__temperature">
+              <img alt="" class="weather-card__icon" />
+              <div>
+                <p class="weather-card__temp-value"></p>
+                <p class="weather-card__description"></p>
+              </div>
+            </div>
+            <dl class="weather-card__details">
+              <div>
+                <dt>Ощущается как</dt>
+                <dd data-field="feelsLike"></dd>
+              </div>
+              <div>
+                <dt>Ветер</dt>
+                <dd data-field="wind"></dd>
+              </div>
+              <div>
+                <dt>Влажность</dt>
+                <dd data-field="humidity"></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <footer class="weather-card__footer">
+          <div class="weather-card__map-wrapper">
+            <img alt="Карта" class="weather-card__map" />
+          </div>
+        </footer>
+      </article>
+    </template>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
+
+

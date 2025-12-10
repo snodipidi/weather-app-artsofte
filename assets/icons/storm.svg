@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="cloud" x1="14" y1="20" x2="54" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c7d2fe"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="22" y1="26" x2="44" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M22 30c0-6.63 5.37-12 12-12 4.9 0 9.14 2.96 10.98 7.16C50.15 25.03 53.5 28.9 53.5 33.5 53.5 39.3 48.8 44 43 44H19.5C13.98 44 9.5 39.52 9.5 34S13.98 24 19.5 24c.92 0 1.82.12 2.68.35A10.02 10.02 0 0 1 22 30Z"
+    fill="url(#cloud)"
+    stroke="#64748b"
+    stroke-width="1.6"
+  />
+  <path
+    d="M31 26h7l-5 10h6l-9 14h5l-10 11 2.5-11h-5.5l7-14h-5z"
+    fill="url(#bolt)"
+    stroke="#d97706"
+    stroke-linejoin="round"
+    stroke-width="1.6"
+  />
+</svg>
+
+
+
+
